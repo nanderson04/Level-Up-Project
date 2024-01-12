@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<body>
+<h1>Submit Test</h1>
+
+<input type="text" id="myInput" oninput="output">
+
+<p id="demo"></p>
+
+
+    <script>
+            function output() {
+                let text = document.getElementById("myInput").value;
+                document.getElementById("demo").innerHTML = "You wrote: " + text;
+            }
+    </script>
+</body>
+
+
+{% endblock %}
