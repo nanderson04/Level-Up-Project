@@ -4,7 +4,15 @@
 <body>
 <h1>Submit Test</h1>
 
-<input type="text" id="myInput" oninput="output">
+    <form method="POST" action="/response">
+        Name: <input type="text" name="fname" required><br>
+        <input type="submit" value="Submit">
+    
+    </form>
+    
+{% if name %}
+<h2>{{name}} is testing</h2>
+{% endif %}
 
 
 </body>
