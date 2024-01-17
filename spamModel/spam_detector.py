@@ -12,11 +12,11 @@ class SpamDetector:
 
         for element in result:
             if element[0] <= 0.1:
-                classifications.append('not-spam')
+                classifications.append('Not-Spam')
             elif element[0] <= 0.2:
-                classifications.append('maybe-spam')
+                classifications.append('Maybe-Spam')
             else:
-                classifications.append('spam')
+                classifications.append('Spam')
 
         return classifications
     
