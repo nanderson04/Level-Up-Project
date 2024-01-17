@@ -13,8 +13,8 @@ def home():
 @app.route('/response', methods=['GET', 'POST'])
 def response():
     if request.method == 'POST':
-        fname = spam_detector.predict(request.form.get("fname"))
-        return render_template("index.html", name=fname)
+        prediction = spam_detector.predict([request.form.get("test")])  #request.form.get gives a string, need to change to list with brackets to use the function
+        return render_template("index.html", name=prediction[0])         # brackets indicate the first element
     return render_template("index.html")
 
 if __name__ == "__main__":
