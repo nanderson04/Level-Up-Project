@@ -2,16 +2,21 @@
 {% block title %}Home Page{% endblock %}
 {% block content %}
 <body>
-<h1>Submit Test</h1>
+<h1>SPAM DETECTOR</h1>
+<p>
+    This spam detector allows you to check text strings for spam. To check, paste the text in the text book below and click submit.
+</p>
+<br>
 
     <form method="POST" action="/response">
-        Name: <input type="text" name="fname" required><br>
+        Test for Spam: <input type="text" name="fname" required><br>
+        <br>
         <input type="submit" value="Submit">
     
     </form>
     
 {% if name %}
-<h2>{{name}} is testing</h2>
+<h2>{{name}} </h2>
 {% endif %}
 
 

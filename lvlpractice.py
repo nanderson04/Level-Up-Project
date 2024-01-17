@@ -13,8 +13,8 @@ def home():
 @app.route('/response', methods=['GET', 'POST'])
 def response():
     if request.method == 'POST':
-        fname = request.form.get("string")
-        return render_template("index.html", predict=spam_detector.predict("string"))
+        fname = spam_detector.predict(request.form.get("fname"))
+        return render_template("index.html", name=fname)
     return render_template("index.html")
 
 if __name__ == "__main__":
