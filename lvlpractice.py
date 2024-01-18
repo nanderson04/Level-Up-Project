@@ -6,15 +6,15 @@ app = Flask(__name__)
 
 spam_detector = SpamDetector()
 
-@app.route("/")
+@app.route("/")                                         #Home page routing
 def home():
     return render_template("index.html")
 
 @app.route('/response', methods=['GET', 'POST'])
 def response():
     if request.method == 'POST':
-        prediction = spam_detector.predict([request.form.get("test")])  #request.form.get gives a string, need to change to list with brackets to use the function
-        return render_template("index.html", name=prediction[0])         # brackets indicate the first element
+        prediction = spam_detector.predict([request.form.get("test")])      #request.form.get gives a string, need to change to list with brackets to use the function
+        return render_template("index.html", name=prediction[0])            # brackets indicate the first element
     return render_template("index.html")
 
 if __name__ == "__main__":

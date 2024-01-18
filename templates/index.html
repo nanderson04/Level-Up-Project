@@ -3,13 +3,14 @@
 {% block content %}
 <body>
 <h1>SPAM DETECTOR</h1>
+
 <p>
-    This spam detector allows you to check text strings for spam. To check, paste the text in the text book below and click submit.
+    This spam detector allows you to check text strings for spam. To check, paste the text in the text book below and click submit. This spam detector is pretrained, and has learned from over thousands of examples of spam and ham to give an accurate prediction for if your input is spam or not. 
 </p>
 <br>
 
     <form method="POST" action="/response">
-        Test for Spam: <input type="text" name="test" required><br>
+        Test for Spam: <input type="text" name="test" id="spam_test" placeholder="Put text here" size="45" required><br>
         <br>
         <input type="submit" value="Submit">
     
